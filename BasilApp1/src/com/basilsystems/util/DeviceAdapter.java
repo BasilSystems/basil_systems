@@ -35,7 +35,7 @@ public class DeviceAdapter extends ArrayAdapter<DeviceModel> {
         View view;
  
         if (convertView == null) {
-            view = mInflater.inflate(R.layout.single_item, parent, false);
+            view = mInflater.inflate(R.layout.test_fragment_list, parent, false);
         } else {
             view = convertView;
         }

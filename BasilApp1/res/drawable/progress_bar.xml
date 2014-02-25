@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  @author : @alexduhem 
+		blog.sakaroz.com
+ -->
+ <layer-list
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<item
+		android:id="@android:id/background">
+		<shape>
+			    <stroke android:width="@dimen/seekbar_stroke_width" android:color="@color/light_gray_header_color"/>
+				<corners
+					android:radius="@dimen/seekbar_height" />
+				<solid android:color="@color/light_gray_header_color"/>
+			</shape>
+	</item>
+	<item
+		android:id="@android:id/secondaryProgress" >
+		<clip>
+			<shape>
+			    <stroke android:width="@dimen/seekbar_stroke_width" android:color="@color/light_gray_header_color"/>
+				<corners
+					android:radius="@dimen/seekbar_height" />
+				<solid android:color="@color/light_gray_header_color"/>
+			</shape>
+		</clip>
+	</item>
+	<item
+		android:id="@android:id/progress" >
+		<clip>
+			<shape>
+			    <stroke android:width="@dimen/seekbar_stroke_width" android:color="@color/light_gray_header_color"/>
+				<corners
+					android:radius="@dimen/seekbar_height" />
+				<gradient
+      android:startColor="#7499e8"
+      android:endColor="#2362dd"
+      android:angle="270"/>
+			</shape>
+		</clip>
+	</item>
+</layer-list>
+

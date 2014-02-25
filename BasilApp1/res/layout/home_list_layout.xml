@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/label"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:alpha="0.50"
+    android:background="@drawable/home_list_background"
+    android:padding="30dip"
+    android:textColor="#000000"
+    android:textSize="26dip"
+    android:textStyle="bold" >
+
+</TextView>

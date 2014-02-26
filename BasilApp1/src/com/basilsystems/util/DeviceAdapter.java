@@ -41,8 +41,7 @@ public class DeviceAdapter extends ArrayAdapter<DeviceModel> {
         }
  
         DeviceModel item = getItem(position);
-        ((TextView)view.findViewById(R.id.tv_label)).setText(item.getName());
-        ((TextView)view.findViewById(R.id.tv_id)).setText(item.getId());
+        ((TextView)view.findViewById(R.id.list_item)).setText(item.getName());
  
         return view;
     }

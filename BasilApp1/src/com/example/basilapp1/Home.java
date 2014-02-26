@@ -16,7 +16,7 @@ import android.widget.ListView;
 import com.basilsystems.util.DeviceAdapter;
 import com.basilsystems.util.DeviceModel;
 
-public class Fragment1 extends ListFragment implements LoaderManager.LoaderCallbacks<List<DeviceModel>> {
+public class Home extends ListFragment implements LoaderManager.LoaderCallbacks<List<DeviceModel>> {
 
 	DeviceAdapter deviceAdapter;
 	

@@ -3,9 +3,8 @@
     android:id="@+id/label"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:alpha="0.50"
-    android:background="@drawable/home_list_background"
-    android:padding="30dip"
+    android:background="@drawable/grey_gradient_color"
+    android:padding="20dip"
     android:textColor="#000000"
     android:textSize="26dip"
     android:textStyle="bold" >

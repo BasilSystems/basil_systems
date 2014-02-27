@@ -24,14 +24,14 @@
 			</shape>
 		</clip>
 	</item>
-	<item
+	<item 
 		android:id="@android:id/progress" >
 		<clip>
 			<shape>
 			    <stroke android:width="@dimen/seekbar_stroke_width" android:color="@color/light_gray_header_color"/>
 				<corners
 					android:radius="@dimen/seekbar_height" />
-				<gradient
+				<gradient 
       android:startColor="#7499e8"
       android:endColor="#2362dd"
       android:angle="270"/>

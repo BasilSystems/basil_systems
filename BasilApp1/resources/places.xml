@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Places>
+    <Place id="id1">HOME</Place>
+    <Place id="id2">OFFICE</Place>
+    <Place id="id3">GARAGE</Place>
+</Places>

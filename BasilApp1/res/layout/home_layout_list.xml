@@ -2,27 +2,28 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/home_list_background"
-    android:orientation="vertical" >
+    android:background="@drawable/grey_gradient_color"
+    android:orientation="horizontal"
+    android:padding="20dip" >
 
     <TextView
         android:id="@+id/list_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:alpha="0.50"
-        
-        android:padding="30dip"
-        android:text="Label"
         android:textColor="#000000"
         android:textSize="26dip"
         android:textStyle="bold" >
     </TextView>
+     <View
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        />
 
-  <ImageView
-      android:id="@+id/arrow"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="right"
-      android:src="@drawable/arrow" />
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow" />
 
 </LinearLayout>

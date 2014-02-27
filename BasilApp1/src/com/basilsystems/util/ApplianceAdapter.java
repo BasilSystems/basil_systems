@@ -11,18 +11,18 @@ import android.widget.TextView;
 
 import com.example.basilapp1.R;
 
-public class DeviceAdapter extends ArrayAdapter<DeviceModel> {
+public class ApplianceAdapter extends ArrayAdapter<ApplianceModel> {
     private final LayoutInflater mInflater;
  
-    public DeviceAdapter(Context context) {
+    public ApplianceAdapter(Context context) {
         super(context, android.R.layout.simple_list_item_2);
         mInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
  
-    public void setData(List<DeviceModel> data) {
+    public void setData(List<ApplianceModel> data) {
         clear();
         if (data != null) {
-            for (DeviceModel appEntry : data) {
+            for (ApplianceModel appEntry : data) {
                 add(appEntry);
             }
         }
@@ -35,13 +35,13 @@ public class DeviceAdapter extends ArrayAdapter<DeviceModel> {
         View view;
  
         if (convertView == null) {
-            view = mInflater.inflate(R.layout.home_layout_list, parent, false);
+            view = mInflater.inflate(R.layout.appliance_layout_list, parent, false);
         } else {
             view = convertView;
         }
  
-        DeviceModel item = getItem(position);
-        ((TextView)view.findViewById(R.id.list_item)).setText(item.getName());
+        ApplianceModel item = getItem(position);
+//        ((TextView)view.findViewById(R.id.list_item)).setText(item.getName());
  
         return view;
     }

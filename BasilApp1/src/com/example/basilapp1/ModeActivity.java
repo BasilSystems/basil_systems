@@ -4,39 +4,55 @@ import android.app.ActionBar;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class ModeActivity extends FragmentActivity implements
-ActionBar.OnNavigationListener {
+public class ModeActivity extends FragmentActivity {
 
 	private FragmentTabHost mTabHost;
+//	private String[] actions = {"Refresh", "Add Device", "Device Delete"};
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.bottom_tabs);
-		setTabs();
 		
 		ActionBar actionBar = getActionBar();
 		
-		String[] dropdownValues = {"Refresh", "Add Device", "Device Delete"};
-		
-		// Specify a SpinnerAdapter to populate the dropdown list.
-	    ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(),
-	        android.R.layout.simple_spinner_item, android.R.id.text1,
-	        dropdownValues);
+		setContentView(R.layout.bottom_tabs);
 
-	    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-	    // Set up the dropdown list navigation in the action bar.
-	    actionBar.setListNavigationCallbacks(adapter, this);
+  				
+		setTabs();
 		
 		
+//		ActionBar actionBar = getActionBar();
+//		
+//		
+//		
+//		 /** Create an array adapter to populate dropdownlist */
+//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getBaseContext(), android.R.layout.simple_spinner_dropdown_item, actions);
+// 
+//        /** Enabling dropdown list navigation for the action bar */
+//        getActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
+//        
+// 
+//        /** Defining Navigation listener */
+//        ActionBar.OnNavigationListener navigationListener = new OnNavigationListener() {
+// 
+//            @Override
+//            public boolean onNavigationItemSelected(int itemPosition, long itemId) {
+//                Toast.makeText(getBaseContext(), "You selected : " + actions[itemPosition]  , Toast.LENGTH_SHORT).show();
+//                return false;
+//            }
+//        };
+// 
+//        /** Setting dropdown items and item navigation listener for the actionbar */
+//        actionBar.setListNavigationCallbacks(adapter, navigationListener);
+//    
 
 	}
 
@@ -72,14 +88,27 @@ ActionBar.OnNavigationListener {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
+		getMenuInflater().inflate(R.menu.home_menu, menu);
+		
+		ActionBar actionBar = getActionBar();
+		
+		actionBar.setDisplayHomeAsUpEnabled(true);
+		actionBar.setTitle("HOME");
 		return true;
 	}
-
+	
 	@Override
-	public boolean onNavigationItemSelected(int arg0, long arg1) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+	        case R.id.refresh:
+	            // Red item was selected
+	            return true;
+	        case R.id.add_device:
+	            // Green item was selected
+	            return true;
+	        default:
+	            return super.onOptionsItemSelected(item);
+		}
 	}
 
 }

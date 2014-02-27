@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Appliances>
+    <Appliance id="id1" name="Fan">
+        <Sliding>False</Sliding>
+        <Status>1</Status>
+        <Auto>True</Auto>
+    </Appliance>
+     <Appliance id="id2" name="Dimmer Light">
+        <Sliding>True</Sliding>
+        <Status>30</Status>
+        <Auto>True</Auto>
+    </Appliance>
+     <Appliance id="id3" name="Light">
+        <Sliding>False</Sliding>
+        <Status>1</Status>
+        <Auto>True</Auto>
+    </Appliance>
+     <Appliance id="id4" name="AC">
+        <Sliding>False</Sliding>
+        <Status>1</Status>
+        <Auto>True</Auto>
+    </Appliance>
+     <Appliance id="id5" name="Diffuser Lamp">
+        <Sliding>False</Sliding>
+        <Status>1</Status>
+        <Auto>True</Auto>
+    </Appliance>
+</Appliances>

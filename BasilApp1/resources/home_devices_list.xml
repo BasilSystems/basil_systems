@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Devices>
+    <Device id="id1">Bedroom</Device>
+     <Device id="id2">Drawing Room</Device>
+      <Device id="id3">Hall</Device>
+       <Device id="id4">Kitchen</Device>
+        <Device id="id5">Store Room</Device>
+</Devices>

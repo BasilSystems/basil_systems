@@ -1,13 +1,18 @@
 package com.example.basilapp1;
 
 import android.app.Activity;
+import android.graphics.Canvas;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.view.View;
+import android.view.LayoutInflater;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 
 public class AllDevicesActivity extends Activity implements OnSeekBarChangeListener {
-	 @Override
+	 private static final int MAX_VALUE_SEEKBAR = 90;
+	private static final int MIN_VALUE_SEEKBAR = 10;
+
+	@Override
 	  public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.all_devices_layout);
@@ -15,16 +20,22 @@ public class AllDevicesActivity extends Activity implements OnSeekBarChangeListe
 	    SeekBar seekBar = (SeekBar)findViewById(R.id.seekbar);
 	    seekBar.setOnSeekBarChangeListener(this);
 	    
+	    
 	  }
 
 	@Override
 	public void onProgressChanged(SeekBar seekBar, int progress,
 			boolean fromUser) {
-		if(progress > 93){
-			seekBar.setProgress(93);
-		}else if(progress < 7){
-			seekBar.setProgress(7);
+		if(progress > MAX_VALUE_SEEKBAR){
+			seekBar.setProgress(MAX_VALUE_SEEKBAR);
+			seekBar.setThumb(getResources().getDrawable(R.drawable.custom_thumb_max_value));
+		}else if(progress < MIN_VALUE_SEEKBAR){
+			seekBar.setProgress(MIN_VALUE_SEEKBAR);
 		}	
+		
+		if(progress<MAX_VALUE_SEEKBAR){
+			seekBar.setThumb(getResources().getDrawable(R.drawable.custom_thumb_normal));
+		}
 		
 	}
 

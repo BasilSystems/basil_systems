@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Appliance>
+    <Slider>True</Slider>
+    <Status>20</Status>
+    <Today>True</Today>
+    <Auto>True</Auto>
+    <Daily>True</Daily>
+    <Week>255</Week>
+    <StartTime>1710</StartTime>
+    <EndTime>1810</EndTime>
+</Appliance>

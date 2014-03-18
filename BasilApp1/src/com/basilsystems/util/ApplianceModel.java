@@ -7,12 +7,15 @@ public class ApplianceModel {
 	private Boolean isSlider;
 	private int status;
 	private Boolean isAuto;
-	private String startTime;
-	private String endTime;
-	private Boolean isScheduledToday;
-	private Boolean isScheduledDaily;
-	private String weekdays;
-	private Boolean isScheduleRepeat;
+	
+	public ApplianceModel(String parentDeviceName, String applianceName, int status, Boolean isSlider, Boolean isAuto ){
+		this.parentDeviceName = parentDeviceName;
+		this.applianceName = applianceName;
+		this.status = status;
+		this.isAuto = isAuto;
+		this.isSlider = isSlider;
+	}
+	
     
     public String getParentDeviceName() {
 		return parentDeviceName;
@@ -44,42 +47,7 @@ public class ApplianceModel {
 	public void setIsAuto(Boolean isAuto) {
 		this.isAuto = isAuto;
 	}
-	public String getStartTime() {
-		return startTime;
-	}
-	public void setStartTime(String startTime) {
-		this.startTime = startTime;
-	}
-	public String getEndTime() {
-		return endTime;
-	}
-	public void setEndTime(String endTime) {
-		this.endTime = endTime;
-	}
-	public Boolean getIsScheduledToday() {
-		return isScheduledToday;
-	}
-	public void setIsScheduledToday(Boolean isScheduledToday) {
-		this.isScheduledToday = isScheduledToday;
-	}
-	public Boolean getIsScheduledDaily() {
-		return isScheduledDaily;
-	}
-	public void setIsScheduledDaily(Boolean isScheduledDaily) {
-		this.isScheduledDaily = isScheduledDaily;
-	}
-	public String getWeekdays() {
-		return weekdays;
-	}
-	public void setWeekdays(String weekdays) {
-		this.weekdays = weekdays;
-	}
-	public Boolean getIsScheduleRepeat() {
-		return isScheduleRepeat;
-	}
-	public void setIsScheduleRepeat(Boolean isScheduleRepeat) {
-		this.isScheduleRepeat = isScheduleRepeat;
-	}
+
 	
     
 }

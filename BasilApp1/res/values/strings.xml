@@ -23,10 +23,25 @@
     <string name="cancel">Cancel</string>
     <string name="give_place_name">Give a name to your place (e.g. home/office etc.)</string>
     <string name="refresh">Refresh</string>
-     <string name="add_device">Add Device</string>
-      <string name="delete_device">Delete Device</string>
-      <string name="home">HOME</string>
-       <string name="miscellaneous">Miscellaneous</string>
-        <string name="rename">Rename</string>
+    <string name="add_device">Add Device</string>
+    <string name="delete_device">Delete Device</string>
+    <string name="home">HOME</string>
+    <string name="miscellaneous">Miscellaneous</string>
+    <string name="rename">Rename</string>
+    <string name="schedule_appliances">Schedule Appliances</string>
+    <string name="general">General</string>
+    <string name="manage_permissions">Manage Permissions</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="sound">Sound</string>
+    <string name="emergency">Emergency</string>
+    <string name="about">About</string>
+    <string name="country">Country</string>
+    <string name="network">Network</string>
+    <string name="fire">Fire</string>
+    <string name="gas_leak">Gas leak</string>
+    <string name="intrusion">Intrusion</string>
+    <string name="notification">Notification</string>
+    <string name="fire_emergency_contact_no">Fire emergency contact no.</string>
+    <string name="retype_passowrd">Retype password</string>
 
 </resources>

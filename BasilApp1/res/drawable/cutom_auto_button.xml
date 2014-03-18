@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--  @author : @alexduhem 
+<!--
+      @author : @alexduhem 
 		blog.sakaroz.com
- -->
- <layer-list 
-     xmlns:android="http://schemas.android.com/apk/res/android">
-     <item>
-         <shape
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:shape="oval" android:drawable="@drawable/grey_gradient_color">
-	<size
-		android:width="@dimen/seekbar_thumb_radius1"
-		android:height="@dimen/seekbar_thumb_radius1" />
-</shape>
-     </item>
-     <item >
-        <bitmap android:src="@drawable/auto_button" android:gravity="center"/>
-     </item>
- </layer-list>
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <shape
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:drawable="@drawable/grey_gradient_color"
+            android:shape="oval" >
+            <size
+                android:height="@dimen/seekbar_thumb_radius1"
+                android:width="@dimen/seekbar_thumb_radius1" />
+        </shape>
+    </item>
+    <item>
+        <selector>
+            <item android:state_checked="true">
+                <bitmap
+                    android:gravity="center"
+                    android:src="@drawable/auto_button" />
+            </item>
+            <item android:state_checked="false">
+                <bitmap
+                    android:gravity="center"
+                    android:src="@drawable/auto_off_button" />
+            </item>
+        </selector>
+    </item>
+
+</layer-list>

@@ -1,9 +1,12 @@
 package com.example.basilapp1;
 
-import java.util.ArrayList;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.support.v4.app.LoaderManager;
@@ -13,6 +16,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 
+import com.basilsystems.util.DataProvider;
 import com.basilsystems.util.DeviceAdapter;
 import com.basilsystems.util.DeviceModel;
 
@@ -39,6 +43,8 @@ public class Home extends ListFragment implements LoaderManager.LoaderCallbacks<
      public void onListItemClick(ListView l, View v, int position, long id) {
          // Insert desired behavior here.
          Log.i("DataListFragment", "Item clicked: " + id);
+         Intent ApplianceIntent = new Intent(Home.this.getActivity(), ApplianceActivity.class);
+	        startActivity(ApplianceIntent);
      }
 
      @Override
@@ -76,18 +82,28 @@ public class Home extends ListFragment implements LoaderManager.LoaderCallbacks<
          public List<DeviceModel> loadInBackground() {
              System.out.println("DataListLoader.loadInBackground");
               
-              // You should perform the heavy task of getting data from 
-              // Internet or database or other source 
-              // Here, we are generating some Sample data
-  
-             // Create corresponding array of entries and load with data.
-             List<DeviceModel> entries = new ArrayList<DeviceModel>(5);
-             entries.add(new DeviceModel("Java", "2"));
-             entries.add(new DeviceModel("C++", "9"));
-             entries.add(new DeviceModel("Python", "6"));
-             entries.add(new DeviceModel("JavaScript", "10"));
-  
-             return entries;
+//              // You should perform the heavy task of getting data from 
+//              // Internet or database or other source 
+//              // Here, we are generating some Sample data
+//  
+//             // Create corresponding array of entries and load with data.
+//             List<DeviceModel> entries = new ArrayList<DeviceModel>(5);
+//             entries.add(new DeviceModel("Java", "2"));
+//             entries.add(new DeviceModel("C++", "9"));
+//             entries.add(new DeviceModel("Python", "6"));
+//             entries.add(new DeviceModel("JavaScript", "10"));
+             AssetManager assetManager = this.getContext().getAssets();
+             InputStream deviceFile = null;
+			try {
+				deviceFile = assetManager.open("home_devices_list.xml");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+             if(DataProvider.devices.get("home") == null){
+            	return DataProvider.getDeviceFromFile(deviceFile, "home");
+             }
+             return DataProvider.devices.get("home");
          }
           
          /**

@@ -13,7 +13,7 @@
 		android:height="@dimen/seekbar_thumb_radius1" />
 </shape>
      </item>
-      <item>
-        <bitmap android:src="@drawable/app_status_auto_off" android:gravity="center"/>
+     <item >
+        <bitmap android:src="@drawable/auto_off_button" android:gravity="center"/>
      </item>
  </layer-list>
